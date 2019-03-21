@@ -1,0 +1,10 @@
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\bin\Debug\Chrome Cache Extractor.exe.config
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\bin\Debug\Chrome Cache Extractor.exe
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\bin\Debug\Chrome Cache Extractor.pdb
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome_Cache_Extractor.csprojAssemblyReference.cache
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome_Cache_Extract.MainWindow.resources
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome_Cache_Extractor.Properties.Resources.resources
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome_Cache_Extractor.csproj.GenerateResource.cache
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome_Cache_Extractor.csproj.CoreCompileInputs.cache
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome Cache Extractor.exe
+C:\Users\SAMSUNG\source\repos\Chrome_Cache_Extractor\Chrome_Cache_Extractor\obj\Debug\Chrome Cache Extractor.pdb
