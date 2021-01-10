@@ -99,7 +99,7 @@ def sort_urls(hexed):
 
 def main():
   i = input("\
-  Please close the application before running the script \
+  Please close the application before running the script \n \
   Leave empty for Chrome \n \
   [B]rave                \n \
   [S]potify              \n \
@@ -108,7 +108,7 @@ def main():
   "
   )
 
-  if i == "Q":
+  if i.upper() == "Q":
     return
   global cache
   cache = programs["C"] if i == "" else programs[i[0].upper()]
