@@ -2,19 +2,8 @@
 #qpy:3
 #qpy:console
 import os, shutil, re ,binascii, gzip
-W = '\033[0m'  # Beyaz (normal)
-R = '\033[31m'  # Kırmızı
-G = '\033[32m'  # Yeşil
-O = '\033[33m'  # Turuncu
-B = '\033[34m'  # Mavi
-P = '\033[35m'  # Mor
-C = '\033[36m'  # Cyan
-GR = '\033[37m'  # Gri
-
-
-
-d = r"C:\Users\SAMSUNG\AppData\Local\Google\Chrome\User Data\Default\Cache\\"
-s = r"C:\Users\SAMSUNG\Desktop\tmp\\"
+d = f"{os.environ.get('LOCALAPPDATA')}\BraveSoftware\Brave-Browser\\User Data\Default\\Cache\\"
+s = f"{os.environ.get('USERPROFILE')}\\Desktop\\FileCache\\"
 gifs = []
 pngs = []
 jpgs = []
@@ -257,24 +246,25 @@ def clean2():
    os.remove(s+"gzips\\"+i)
  print("Bütün dosyalar ayrıştırıldı!")
 
-y= input("Gireceğiniz KB değerinden küçük olan dosyalar silinecek:")
-clean()
-cop(y)
-find(y)
-move()
-lav=[]
-gifs=[]
-pngs=[]
-jpgs=[]
-mpgs=[]
-find_gzip()
-move_gzip()
-#fix()
-clean2()
-print(pngs)
-print(gifs)
-print(jpgs)
-if not len(odd)==0:
- for i in odd:
-  for n in byt:
-   print("Düzenlenen dosya:"+i+" Son 5 byte:"+n)
+if __name__ == "__main__":
+  y= input("Gireceğiniz KB değerinden küçük olan dosyalar silinecek:")
+  clean()
+  cop(y)
+  find(y)
+  move()
+  lav=[]
+  gifs=[]
+  pngs=[]
+  jpgs=[]
+  mpgs=[]
+  find_gzip()
+  move_gzip()
+  #fix()
+  clean2()
+  print(pngs)
+  print(gifs)
+  print(jpgs)
+  if not len(odd)==0:
+   for i in odd:
+    for n in byt:
+     print("Düzenlenen dosya:"+i+" Son 5 byte:"+n)
