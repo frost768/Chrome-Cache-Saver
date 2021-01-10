@@ -1,7 +1,7 @@
 ﻿"""
 A script for extracting video files from media cache of Chromium based apps
 Author : ChrNolan52
-Last updated: Sun Jan 10 2021 16:22:52 GMT+0300 (GMT+03:00)
+Last updated: Sun Jan 10 2021 18:05:16 GMT+0300 (GMT+03:00)
 """
 
 
@@ -59,22 +59,21 @@ def sort_urls(hexed):
     
     mp4s=[]
     mp42s=[]
-    urls = open(f"{output_folder}\\list.txt","w")
+
     for address in addr:
       for m in mp4:
-        urls.write(str(binascii.unhexlify(m[84:-36]))[2:-1])
         if m[0:8] == address[1]:
           mp42s.append(["f_"+address[0],m[84:-36],int(str(binascii.unhexlify(m[-6:]))[2:-1].replace("\\x00",""),16)])
       for mp in mp42:
-        urls.write(str(binascii.unhexlify(mp[84:]))[2:-1])
         if mp[0:8] == address[1]:
           mp4s.append(["f_"+address[0],mp[84:]])
-    urls.close()
+
     mp42s=sorted(mp42s,key = lambda x:(x[1],x[2])) # x[1] = url, x[2] = order; sorts by url then order
     mp4s=sorted(mp4s,key = lambda x:x[1]) # x[1] = url ; sorts by url
     
     part_list=[]
     file_parts=[]
+
     for i in range(len(mp42s)-1):
       if mp42s[i][1] == mp42s[i+1][1]:
         file_parts.append(mp42s[i][0])
@@ -99,7 +98,7 @@ def sort_urls(hexed):
 
 def main():
   i = input("\
-  Please close the application before running the script \
+  Please close the application before running the script \n \
   Leave empty for Chrome \n \
   [B]rave                \n \
   [S]potify              \n \
@@ -108,7 +107,7 @@ def main():
   "
   )
 
-  if i == "Q":
+  if i.upper() == "Q":
     return
   global cache
   cache = programs["C"] if i == "" else programs[i[0].upper()]
